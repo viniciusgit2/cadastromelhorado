@@ -1,5 +1,5 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
-import { Path } from "webpack-cli";
+
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -8,9 +8,25 @@ const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
 const isProduction = process.env.NODE_ENV == "production";
 
 const stylesHandler = MiniCssExtractPlugin.loader;
-
+module.exports = () => {
+  const include = {
+    entry: "./src/index",
+    
+    output: {
+      path: path.resolve(__dirname, "dist"),
+      librarytarget:`umd`,
+      library:`spote`,
+  
+  
+    },
+    devtool :`source-map`
+  [{test: /\.js$/, loader: `babel-loader`,include}
+  ]  
+  }
+  }
+  
 const config = {
-  entry: "./src/index.ts",
+  entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
   },
@@ -31,26 +47,26 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)$/i,
-        loader: "ts-loader",
-        exclude: ["/node_modules/"],
+        test: /\.(js|jsx)$/i,
+        loader: "babel-loader",
       },
       {
         test: /\.css$/i,
         use: [stylesHandler, "css-loader"],
       },
       {
+        test: /\.styl$/i,
+        use: [stylesHandler, "css-loader", "stylus-loader"],
+      },
+      {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
         type: "asset",
-      },
+      }
 
       // Add your rules for custom modules here
       // Learn more about loaders from https://webpack.js.org/loaders/
     ],
-  },
-  resolve: {
-    extensions: [".tsx", ".ts", ".jsx", ".js", "..."],
-  },
+  }
 };
 
 module.exports = () => {
