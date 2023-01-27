@@ -1,4 +1,4 @@
-import {expect,} from "chai"
+import {expect} from "chai"
 import { search,searchalbum,searchartist } from "../main"
 import Sinon from "sinon"
 import { global } from "styled-jsx/css"

@@ -12,8 +12,11 @@
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch",
-    "teste1": "./node_modules/bin/mocha/src/pages/spote/testes/**/*.spec.js --require babel-register",
-    "serve": "webpack serve"
+    "teste1": "./node_modules/.bin/mocha /**/* spote/mocha/testes/.spec.js --require babel-register ",
+    "teste2": "./node_modules/.bin/smoke /**/* spote/smoke/testes/.spec.js",
+    "tdd": "./node_modules/.bin/mocha /**/* spote/mocha/testes/.spec.js --watch",
+    "serve": "webpack serve",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@next/font": "13.1.5",
@@ -34,6 +37,7 @@
     "chai": "^4.3.7",
     "css-loader": "^6.7.3",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.3",
     "mini-css-extract-plugin": "^2.7.2",
     "mocha": "^10.2.0",
     "node-fetch": "^3.3.0",
