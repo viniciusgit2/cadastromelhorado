@@ -16,7 +16,8 @@
     "teste2": "./node_modules/.bin/smoke /**/* spote/smoke/testes/.spec.js",
     "tdd": "./node_modules/.bin/mocha /**/* spote/mocha/testes/.spec.js --watch",
     "serve": "webpack serve",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "build2":"./node_modules/.bin/babel --out-dir lib src"
   },
   "dependencies": {
     "@next/font": "13.1.5",
