@@ -9,7 +9,7 @@ const isProduction = process.env.NODE_ENV == "production";
 
 const stylesHandler = MiniCssExtractPlugin.loader;
 export default{
-entry:  `src./index.js`,
+entry:  `../src/spote/main.js`,
   output:{
     path:join(__dirname, `dist`),
     librarytarget:`umd`,
