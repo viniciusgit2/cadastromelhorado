@@ -12,13 +12,15 @@
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch",
-    "teste1": "./node_modules/.bin/mocha /**/* spote/mocha/testes/.spec.js --require babel-register ",
+    "teste1": "./node_modules/.bin/mocha /**/* spote/mocha/testes/.spec.js --require babel-register  ",
     "teste2": "./node_modules/.bin/smoke /**/* spote/smoke/testes/.spec.js",
     "tdd": "./node_modules/.bin/mocha /**/* spote/mocha/testes/.spec.js --watch",
     "serve": "webpack serve",
     "prepare": "husky install",
     "build2": "./node_modules/.bin/babel --out-dir lib src",
-    "build3": "./node_modules/.bin/webpack --output-filename  spote.umd.js"
+    "build3": "./node_modules/.bin/webpack --output-filename  spote.umd.js --mode=production ",
+    "build4": "./node_modules/.bin/webpack --output-filename  spote.umd.min.js --mode=production ",
+   "build5":"yarn build2 && yarn build3 &&  yarn build4"
   },
   "dependencies": {
     "@next/font": "13.1.5",
@@ -37,6 +39,7 @@
     "@babel/preset-env": "^7.20.2",
     "@webpack-cli/generators": "^3.0.1",
     "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-loader": "^9.1.2",
     "chai": "^4.3.7",
     "css-loader": "^6.7.3",

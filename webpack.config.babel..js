@@ -1,29 +1,31 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
-
+import { join } from "path";
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
-
+const include = join(__dirname, "src")
 const isProduction = process.env.NODE_ENV == "production";
 
 const stylesHandler = MiniCssExtractPlugin.loader;
-module.exports = () => {
-  const include = {
-    entry: "./src/index",
+export default{
+entry:  `src./index.js`,
+  output:{
+    path:join(__dirname, `dist`),
+    librarytarget:`umd`,
+    library:`spote`
+  },
+  devtool:`source-map`,
+  module:{
+    loaders:[{test: /\.js$/, loader:`babel-loader`,include }]
     
-    output: {
-      path: path.resolve(__dirname, "dist"),
-      librarytarget:`umd`,
-      library:`spote`,
-  
-  
-    },
-    devtool :`source-map`
-  [{test: /\.js$/, loader: `babel-loader`,include}
-  ]  
   }
-  }
+ 
+}
+  
+
+
+  
   
 const config = {
   entry: "./src/index.js",
@@ -78,4 +80,6 @@ module.exports = () => {
     config.mode = "development";
   }
   return config;
-};
+}
+
+
