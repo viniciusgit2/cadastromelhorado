@@ -20,7 +20,7 @@
     "build2": "./node_modules/.bin/babel --out-dir lib src",
     "build3": "./node_modules/.bin/webpack --output-filename  spote.umd.js --mode=production ",
     "build4": "./node_modules/.bin/webpack --output-filename  spote.umd.min.js --mode=production ",
-   "build5":"yarn build2 && yarn build3 &&  yarn build4"
+    "build5": "yarn build2 && yarn build3 &&  yarn build4"
   },
   "dependencies": {
     "@next/font": "13.1.5",

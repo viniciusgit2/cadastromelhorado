@@ -1,11 +1,13 @@
 {
-    "cSpell.words": [
-        "artistaandalbum",
-        "getalbum",
-        "getalbums",
-        "getalbumtracks",
-        "htmls",
-        "searchplaylist",
-        "spote"
-    ]
+  "cSpell.words": [
+    "artistaandalbum",
+    "getalbum",
+    "getalbums",
+    "getalbumtracks",
+    "htmls",
+    "searchplaylist",
+    "spote"
+  ],
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }

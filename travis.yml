@@ -1,0 +1,7 @@
+language:node-js
+node_js: =19.5.0
+cache:directories:`node-modules`
+before_scripts: yarn build5
+after_scripts:
+after_success:
+
