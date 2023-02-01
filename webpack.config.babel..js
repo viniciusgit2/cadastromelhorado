@@ -1,5 +1,6 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
 import { join } from "path";
+import { SourceMap } from "module";
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -9,7 +10,7 @@ const isProduction = process.env.NODE_ENV == "production";
 
 const stylesHandler = MiniCssExtractPlugin.loader;
 export default{
-entry:  `../src/spote/main.js`,
+entry:  `../src/spote/index.js`,
   output:{
     path:join(__dirname, `dist`),
     librarytarget:`umd`,

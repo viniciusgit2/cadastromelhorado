@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    
     "dev": "next dev",
     "build": "webpack --mode=production --node-env=production",
     "start": "next start",
@@ -18,9 +19,10 @@
     "serve": "webpack serve",
     "prepare": "husky install",
     "build2": "./node_modules/.bin/babel --out-dir lib src",
-    "build3": "./node_modules/.bin/webpack --output-filename  spote.umd.js --mode=production ",
-    "build4": "./node_modules/.bin/webpack --output-filename  spote.umd.min.js --mode=production ",
-    "build5": "yarn build2 && yarn build3 &&  yarn build4"
+    "build3":" yarn build2 --watch",
+    "build4": "./node_modules/.bin/webpack --output-filename  spote.umd.js --mode=production ",
+    "build5": "./node_modules/.bin/webpack --output-filename  spote.umd.min.js --mode=production ",
+    "build6": "yarn build2 && yarn build3 &&  yarn build4"
   },
   "dependencies": {
     "@next/font": "13.1.5",
