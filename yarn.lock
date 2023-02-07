@@ -5440,6 +5440,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"extensionmgr@npm:>= 0.1.0":
+  version: 0.1.0
+  resolution: "extensionmgr@npm:0.1.0"
+  checksum: 12a564f9e2679d3ce3bbd377910c71e6ef185318193ff985ee7286ff3911782f98e9f28f6ed834a976ae16596ec6d56264d57465f1cb59af7e5843bf5d9611ca
+  languageName: node
+  linkType: hard
+
 "external-editor@npm:^3.0.3":
   version: 3.1.0
   resolution: "external-editor@npm:3.1.0"
@@ -8523,6 +8530,7 @@ __metadata:
     sinon-stub-promise: ^4.0.0
     smoke: ^3.1.1
     source-map: ^0.7.4
+    stub: ^0.3.2
     style-loader: ^3.3.1
     stylus: ^0.59.0
     stylus-loader: ^7.1.0
@@ -11283,6 +11291,15 @@ __metadata:
   version: 3.1.1
   resolution: "strip-json-comments@npm:3.1.1"
   checksum: 492f73e27268f9b1c122733f28ecb0e7e8d8a531a6662efbd08e22cccb3f9475e90a1b82cab06a392f6afae6d2de636f977e231296400d0ec5304ba70f166443
+  languageName: node
+  linkType: hard
+
+"stub@npm:^0.3.2":
+  version: 0.3.2
+  resolution: "stub@npm:0.3.2"
+  dependencies:
+    extensionmgr: ">= 0.1.0"
+  checksum: e79f9aff83d41b282e66000f6729b34d06318176d744046bfcfda148e865f83836db6294b4a85691dae4647e4e7ed291a551fd93fe1ed51318957f9ba2389661
   languageName: node
   linkType: hard
 

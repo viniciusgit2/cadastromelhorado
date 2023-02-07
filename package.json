@@ -57,6 +57,7 @@
     "sinon-stub-promise": "^4.0.0",
     "smoke": "^3.1.1",
     "source-map": "^0.7.4",
+    "stub": "^0.3.2",
     "style-loader": "^3.3.1",
     "stylus": "^0.59.0",
     "stylus-loader": "^7.1.0",
