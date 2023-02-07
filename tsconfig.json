@@ -34,7 +34,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "lib/pages/spote/index2.jsx"  ],
   "exclude": [
     "node_modules"
   ]
