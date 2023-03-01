@@ -1,32 +1,31 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
 import { join } from "path";
+import { library } from "webpack";
+const include =join (__dirname,"src")
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
-const include = join(__dirname, "src")
+const { join } = require("path");
+ export default{
+  entry:'./src/pages//spote/index',
+  output:{
+    path:join(__dirname,"dist"),
+    librarytarget:'umd',
+    library:"spote"
+  },devtool:"source-map",
+module:{
+  loaders:[
+{test :/\.js$/, loader:"babel-loader",include}
+  ]
+  }
+}
+  
+ 
 const isProduction = process.env.NODE_ENV == "production";
 
 const stylesHandler = MiniCssExtractPlugin.loader;
-export default{
-entry:  `../src/spote/main.js`,
-  output:{
-    path:join(__dirname, `dist`),
-    librarytarget:`umd`,
-    library:`spote`
-  },
-  devtool:`source-map`,
-  module:{
-    loaders:[{test: /\.js$/, loader:`babel-loader`,include }]
-    
-  }
- 
-}
-  
 
-
-  
-  
 const config = {
   entry: "./src/index.js",
   output: {
@@ -57,18 +56,14 @@ const config = {
         use: [stylesHandler, "css-loader"],
       },
       {
-        test: /\.styl$/i,
-        use: [stylesHandler, "css-loader", "stylus-loader"],
-      },
-      {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
         type: "asset",
-      }
+      },
 
       // Add your rules for custom modules here
       // Learn more about loaders from https://webpack.js.org/loaders/
     ],
-  }
+  },
 };
 
 module.exports = () => {
@@ -80,6 +75,4 @@ module.exports = () => {
     config.mode = "development";
   }
   return config;
-}
-
-
+};
