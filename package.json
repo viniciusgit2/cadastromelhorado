@@ -12,6 +12,8 @@
     "tdd": "./node_modules/.bin/mocha /**/* spote/mocha/testes/.spec.js --watch",
     "prepare": "husky install",
     "build": "webpack --mode=production --node-env=production",
+    "build2":"./node_modules/.bin/webpack --output-filename spote.umd.js",
+    "build3":"./node_modules/.bin/webpack --output-filename spote.umd.min.js --mode=production",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch",

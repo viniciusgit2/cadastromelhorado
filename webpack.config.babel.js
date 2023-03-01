@@ -6,7 +6,6 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
-const { join } = require("path");
  export default{
   entry:'./src/pages//spote/index',
   output:{
