@@ -1,6 +1,6 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
-import { join } from "path";
-const path = require("path");
+import { dirname, join } from "path";
+const path = require(`path`);
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
@@ -9,24 +9,26 @@ const isProduction = process.env.NODE_ENV == "production";
 
 const stylesHandler = MiniCssExtractPlugin.loader;
 export default{
-entry:  `../src/spote/main.js`,
+  context:path.resolve (dirname,"./src"),
+   entry: `../src/spote/main.js`,
   output:{
     path:join(__dirname, `dist`),
     librarytarget:`umd`,
-    library:`spote`
+    library:`spote`,
+    filename:"bundle.js"
+  }, devServer:{
+    contentbase:path.resolve(dirname,"dist")
   },
   devtool:`source-map`,
+    open: true,
+    host: "localhost",
   module:{
     loaders:[{test: /\.js$/, loader:`babel-loader`,include }]
     
   }
- 
+
+  
 }
-  
-
-
-  
-  
 const config = {
   entry: "./src/index.js",
   output: {
@@ -35,6 +37,7 @@ const config = {
   devServer: {
     open: true,
     host: "localhost",
+    contentbase: path.resolve(__dirname,"dist")
   },
   plugins: [
     new HtmlWebpackPlugin({

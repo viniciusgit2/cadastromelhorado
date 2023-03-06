@@ -24,7 +24,8 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "strictNullChecks": true
   },
   "files": [
     "src/index.ts"
@@ -33,8 +34,9 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "lib/pages/spote/index2.jsx"  ],
+    "**/*.tsx",
+    "lib/pages/spote/index2.jsx"
+  ],
   "exclude": [
     "node_modules"
   ]
