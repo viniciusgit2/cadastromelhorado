@@ -21,7 +21,7 @@
     "build3": "./node_modules/.bin/webpack --output-filename  spote.umd.js --mode=production ",
     "build4": "./node_modules/.bin/webpack --output-filename  spote.umd.min.js --mode=production ",
     "build5": "yarn build2 && yarn build3 &&  yarn build4",
-    "build6": "./node_modules/.bin/webpack --mode=development "
+    "build6": "./node_modules/.bin/webpack server --mode=development "
   },
   "dependencies": {
     "@next/font": "13.2.3",

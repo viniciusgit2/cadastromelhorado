@@ -1,4 +1,3 @@
-import { type } from "os"
 
 export const search=(query,type)=>
 fetch( `https://api.spotify.com/${query}&${type}`)

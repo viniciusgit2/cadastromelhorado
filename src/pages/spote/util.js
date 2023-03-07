@@ -1,1 +1,1 @@
-export const  tojson =   json=> data.json
+export const  tojson =   ()=> data.json
