@@ -2,7 +2,7 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
-    "module": "esnext",
+    "module": "ES6",
     "target": "ES6",
     "allowJs": true,
     "lib": [
@@ -35,7 +35,8 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "lib/pages/spote/index2.jsx"
+    "lib/pages/spote/index2.jsx",
+    "C:\\Users\\v8pat\\Desktop\\cadastromelhorado\\.next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
