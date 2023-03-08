@@ -23,13 +23,15 @@ export default{
   devtool:`source-map`,
     open: true,
     host: "localhost",
-  module:{
+  module:{ rules:{
+ use:[{
     loaders:[{test: /\.js$/, loader:`babel-loader`,include }]
-    
+  }]
   }
-
+  }
+  }
   
-}
+
 const config = {
   entry: "./src/index.js",
   output: {
